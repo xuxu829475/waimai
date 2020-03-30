@@ -5,65 +5,65 @@ import com.waimai.goods.pojo.Brand;
 
 import java.util.List;
 
-/**
- * @program: waimai
- * @description:
- * @author: Mr.Xu
- * @create: 2020-03-30 14:49
- **/
+/****
+ * @Author:shenkunlin
+ * @Description:Brand业务层接口
+ * @Date 2019/6/14 0:16
+ *****/
 public interface BrandService {
 
-    /**
-     * 查询所有商品
+    /***
+     * Brand多条件分页查询
+     * @param brand
+     * @param page
+     * @param size
      * @return
      */
-    List<Brand> findAll();
+    PageInfo<Brand> findPage(Brand brand, int page, int size);
 
-    /**
-     * 根据ID查询
-     * @param id
+    /***
+     * Brand分页查询
+     * @param page
+     * @param size
      * @return
      */
-    Brand findById(Integer id);
+    PageInfo<Brand> findPage(int page, int size);
 
-    /**
-     * 新增
-     * @param brand
-     */
-    void add(Brand brand);
-
-    /**
-     * 修改
-     * @param brand
-     */
-    void update(Brand brand);
-
-    /**
-     * 删除
-     * @param id
-     */
-    void delete(Integer id);
-
-    /**
-     * 根据条件查询
+    /***
+     * Brand多条件搜索方法
      * @param brand
      * @return
      */
     List<Brand> findList(Brand brand);
 
-    /**
-     * 分页查询
+    /***
+     * 删除Brand
+     * @param id
+     */
+    void delete(Integer id);
+
+    /***
+     * 修改Brand数据
      * @param brand
-     * @param page
-     * @param size
-     * @return
      */
-    PageInfo<Brand> findPage(Brand brand,Integer page,Integer size);
+    void update(Brand brand);
+
+    /***
+     * 新增Brand
+     * @param brand
+     */
+    void add(Brand brand);
+
     /**
-     * 分页查询
-     * @param page
-     * @param size
+     * 根据ID查询Brand
+     * @param id
      * @return
      */
-    PageInfo<Brand> findPage(Integer page,Integer size);
+     Brand findById(Integer id);
+
+    /***
+     * 查询所有Brand
+     * @return
+     */
+    List<Brand> findAll();
 }
