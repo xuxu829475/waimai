@@ -15,6 +15,7 @@
     </description>
     <modules>
         <module>waimai-service-goods-api</module>
+        <module>waimai-service-xu-goods-api</module>
     </modules>
 
     <dependencies>

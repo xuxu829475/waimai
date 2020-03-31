@@ -15,6 +15,7 @@
         <module>waimai-eureka</module>
         <module>waimai-common</module>
         <module>waimai-common-db</module>
+        <module>changgou-user-oauth</module>
     </modules>
     <packaging>pom</packaging>
 
