@@ -3,27 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>waimai-parent</artifactId>
+        <artifactId>waimai-service-api</artifactId>
         <groupId>com.xu.waimai</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>waimai-service</artifactId>
-    <packaging>pom</packaging>
-    <description>
-        外卖平台各大微服务的父工程
-    </description>
-    <modules>
-        <module>waimai-service-goods</module>
-        <module>waimai-service-file</module>
-        <module>waimai-service-xu-goods</module>
-        <module>changgou_service_search</module>
-    </modules>
+
+    <artifactId>changgou_service_search_api</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.xu.waimai</groupId>
-            <artifactId>waimai-common-db</artifactId>
+            <artifactId>waimai-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.xu.waimai</groupId>
+            <artifactId>waimai-service-goods-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

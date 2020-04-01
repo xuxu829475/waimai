@@ -8,8 +8,11 @@ import entity.StatusCode;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import tk.mybatis.mapper.entity.Example;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /****
  * @Author:shenkunlin
@@ -143,5 +146,19 @@ public class SkuController {
         //调用SkuService实现查询所有Sku
         List<Sku> list = skuService.findAll();
         return new Result<List<Sku>>(true, StatusCode.OK,"查询成功",list) ;
+    }
+
+    @GetMapping("/spu/{spuId}")
+    public List<Sku> findSkuListBySpuId(@PathVariable("spuId") String spuId){
+        Map<String,Object> searchMap = new HashMap<>(2);
+
+        Sku sku = new Sku();
+        sku.setStatus("1");
+        if (!"all".equals(spuId)){
+            sku.setSpuId(spuId);
+        }
+        List<Sku> skuList = skuService.findList(sku);
+
+        return skuList;
     }
 }

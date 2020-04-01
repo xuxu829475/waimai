@@ -16,6 +16,7 @@
     <modules>
         <module>waimai-service-goods-api</module>
         <module>waimai-service-xu-goods-api</module>
+        <module>changgou_service_search_api</module>
     </modules>
 
     <dependencies>
