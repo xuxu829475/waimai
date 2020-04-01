@@ -2,7 +2,7 @@ package com.changgou.search.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.changgou.search.dao.ESManagerMapper;
-import com.changgou.search.feign.SkuFeign;
+import com.waimai.goods.feign.SkuFeign;
 import com.changgou.search.pojo.SkuInfo;
 import com.changgou.search.service.ESManagerService;
 import com.waimai.goods.pojo.Sku;

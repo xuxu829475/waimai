@@ -18,7 +18,7 @@ public class SearchController {
     private SearchService searchService;
 
     @GetMapping
-    public Map search(@RequestParam Map<String,String> searchMap){
+    public Map search(@RequestParam(required = false) Map<String,String> searchMap){
         //特殊符号处理
         this.handleSearchMap(searchMap);
         Map searchResult = searchService.search(searchMap);
