@@ -18,6 +18,7 @@
         <module>waimai-service-file</module>
         <module>waimai-service-xu-goods</module>
         <module>changgou_service_search</module>
+        <module>changgou_service_user</module>
     </modules>
 
     <dependencies>
